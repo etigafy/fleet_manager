@@ -1,5 +1,8 @@
 # mci_turtlebot
 
+## TODO
+ROS node for /clicked_point locations
+
 ## SSH
 ssh ubuntu@192.168.53.136
 turtlebot4
