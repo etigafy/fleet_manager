@@ -10,7 +10,7 @@ ROS node to save poses
 4. start nav2 node on pi
 5. profit?
 
-```ros2 launch turtlebot4_navigation nav_bringup.launch.py slam:=off localization:=true map:=map_mci.yaml```
+```ros2 launch turtlebot4_navigation nav_bringup.launch.py slam:=off localization:=true map:=map_MCI.yaml```
 
 
 ## SSH
