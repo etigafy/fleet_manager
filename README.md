@@ -26,8 +26,10 @@ ros2 service call /start_motor std_srvs/srv/Empty {}
 ros2 launch turtlebot4_viz view_robot.launch.py
 
 # save map
+``
 ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name:
   data: 'map_mci'"
+```
 
 # start nav2
 ros2 launch turtlebot4_navigation nav_bringup.launch.py slam:=off localization:=true map:=map_mci.yaml
