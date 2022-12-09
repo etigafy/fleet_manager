@@ -1,16 +1,23 @@
 # mci_turtlebot
 
 ## TODO
-ROS node for /clicked_point locations
+ROS node to save poses
+
+## Navigation
+1. create map
+2. save map
+3. move map.yaml & map.pgm to pi
+4. start nav2 node on pi
+5. profit?
+
+```ros2 launch turtlebot4_navigation nav_bringup.launch.py slam:=off localization:=true map:=map_mci.yaml```
+
 
 ## SSH
-ssh ubuntu@192.168.53.136
+ssh ubuntu@192.168.243.136
 turtlebot4
 
 nmap -sn 192.168.1.0/24
-
-## source ROS2
-source /opt/ros/galactic/setup.bash
 
 ## fix DDS
 export CYCLONEDDS_URI=file://cycloneDDS.xml
