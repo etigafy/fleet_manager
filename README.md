@@ -33,7 +33,7 @@ ros2 service call /start_motor std_srvs/srv/Empty {}
 ros2 launch turtlebot4_viz view_robot.launch.py
 
 # save map
-``
+``´
 ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name:
   data: 'map_mci'"
 ```
