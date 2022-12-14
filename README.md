@@ -1,7 +1,12 @@
 # mci_turtlebot
 
 ## TODO
-ROS node to save poses
+- reliable and reproducable navigation
+- elevator control node
+- GUI
+- dropoff/pickup station docking
+- task planner
+- traffic planner(?)
 
 ## SSH
 ```
