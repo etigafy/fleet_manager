@@ -9,7 +9,9 @@ pw: turtlebot4
 
 ## WIFI
 ### Robotics Lab Wifi
-```wlpassword013```
+```
+wlpassword013
+```
 ### Wifi setup file PI4
 ```/etc/netplan/50-cloud-init-yaml```
 ### find PI4 IP on network
