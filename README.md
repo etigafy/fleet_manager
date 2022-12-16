@@ -10,6 +10,7 @@
 - dropoff/pickup station docking
 - task planner
 - traffic planner(?)
+- QoS level subscriber? (10 = REALIABILITY?)
 
 ## SSH
 ```
