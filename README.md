@@ -1,5 +1,8 @@
 # mci_turtlebot
 
+## Ask Thomas
+- change default username from ubuntu to turtleX
+
 ## TODO
 - reliable and reproducable navigation
 - elevator control node
