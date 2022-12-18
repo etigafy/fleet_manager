@@ -1,7 +1,9 @@
 # mci_turtlebot
 
-## Ask Thomas
-- change default username from ubuntu to turtleX
+## Things to try
+-> chrony
+-> delay in laserscan transforms
+-> delay during laser info processing? 
 
 ## TODO
 - reliable and reproducable navigation
