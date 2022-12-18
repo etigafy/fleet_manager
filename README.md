@@ -5,12 +5,6 @@
 - delay in laserscan transforms
 - delay during laser info processing?
 
-<html>
-  <script>
-    var hello = 5;
-  </script>
-</html>
-
 ## TODO
 - reliable and reproducable navigation
 - elevator control node
