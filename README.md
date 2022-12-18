@@ -6,7 +6,9 @@
 - delay during laser info processing?
 
 <html>
-  <h1>Hello</h1>  
+  <script>
+    var hello = 5;
+  </script>
 </html>
 
 ## TODO
