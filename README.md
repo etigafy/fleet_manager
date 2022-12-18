@@ -1,9 +1,9 @@
 # mci_turtlebot
 
 ## Things to try
--> chrony
--> delay in laserscan transforms
--> delay during laser info processing? 
+- chrony
+- delay in laserscan transforms
+- delay during laser info processing? 
 
 ## TODO
 - reliable and reproducable navigation
