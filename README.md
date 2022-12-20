@@ -1,4 +1,4 @@
-# Turtlebot 4 resource collection
+# Turtlebot 4 Resource Collection
 
 ## Things to try
 - chrony
