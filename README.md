@@ -1,4 +1,4 @@
-# mci_turtlebot
+# Turtlebot 4 resource collection
 
 ## Things to try
 - chrony
