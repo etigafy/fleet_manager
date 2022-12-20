@@ -8,7 +8,7 @@ ros2 launch turtlebot4_navigation slam_sync.launch.py
 ### save map
 ```
 ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name:
-  data: 'map_mci'"
+  data: 'map_MCI'"
 ```
 
 ## Navigation
