@@ -19,8 +19,6 @@
 ssh ubuntu@<clientIP>
 pw: turtlebot4
 ```
-### public key setup
-https://kb.iu.edu/d/aews
 
 ## WIFI
 ### Robotics Lab Wifi
