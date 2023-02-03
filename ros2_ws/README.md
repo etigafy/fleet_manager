@@ -30,6 +30,10 @@ ros2 launch tt_cpp orientation_logger_launch.py
 - Initial Pose einlernen (linker "2D Pose Estimate")
 - Alle POIs einlernen (rechter "2D Pose Estimate")
   - POIs gespeichert in "waypoints_formatted.dat"
+    - Machine Pickup/DropOff
+    - CharginStation (pro Roboter)
+    - PickupStation/DropOffStation
+    - IdleStations (pro Roboter)
 - Copy folder ros2_ws/put_in_home/taskPlannerData to ~/taskPlannerData
 - POIs aus "waypoints_formatted.dat" in entsprechende Dateien in taskPlannerData kopieren
   - Wichtig: IDs vergeben und Gesamtzahl anpassen
