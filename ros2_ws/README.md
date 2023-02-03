@@ -1,6 +1,7 @@
-# Elevator
+# Workflow
+## Elevator
 
-## Server starten auf Turtlebot
+### Server starten auf Turtlebot
 
 #### Server starten
 ````
@@ -61,4 +62,27 @@ Known issues:
   ````
   sudo ln -s /home/[username] /home/h
   ````
+## TaskPlanner starten
+Fleet management server
+````
+ros2 run mci_rmf task_planner
+````
+Output
+````
+6/6 landmark files read.
+Landmarks loaded
+Task planner started.
+------------------------
+````
 
+Client starten (jeweils 1x im Namespace des Turtlebots)
+turtle_client managedt die Auftrage vom taskPlanner für den jeweiligen Turtlebot (Fahre-Befehle, Docken, etc.)
+Parameter: clientID:=1, default = 9999
+````
+ros2 launch mci_rmf turtle_client_launch.py [clientID:=XX]
+````
+
+## GUI auf GUI-Rpi starten
+````
+ros2 run turtlebot4_py_gui turtlebot4_py_gui_node
+````
