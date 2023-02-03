@@ -1,0 +1,5 @@
+# 1 - reset deliveryMap
+# 2 - reset clientMap and landmarks
+int32 type
+---
+bool taskcomplete

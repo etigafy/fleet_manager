@@ -1,0 +1,7 @@
+num_idleStations=1
+#########################
+id=1
+pickup_x(mm)=2.345275
+pickup_y(mm)=-1.116537
+pickup_theta(degrees)=33.101978
+#############################

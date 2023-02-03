@@ -1,0 +1,14 @@
+num_machines=2
+#########################
+id=1
+pickup_x(mm)=2.651624
+pickup_y(mm)=0.198512
+pickup_theta(degrees)=0.403118
+processing_time(ms)=10000
+#########################
+id=2
+pickup_x(mm)=2.519932
+pickup_y(mm)=-1.221245
+pickup_theta(degrees)=-1.147145
+processing_time(ms)=7000
+#########################

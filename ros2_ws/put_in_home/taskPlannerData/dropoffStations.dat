@@ -1,0 +1,7 @@
+num_dropoffStations=1
+#########################
+id=1
+pickup_x(mm)=6.015329
+pickup_y(mm)=0.882575
+pickup_theta(degrees)=-92.220955
+#############################
