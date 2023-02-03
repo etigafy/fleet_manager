@@ -62,6 +62,7 @@ Known issues:
   ````
   sudo ln -s /home/[username] /home/h
   ````
+- Machine Waypoints: Alle Zeilen (s.o.) wichtig
 ## TaskPlanner starten
 Fleet management server
 ````
