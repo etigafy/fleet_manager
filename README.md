@@ -30,6 +30,7 @@ pw: wlpassword013
 nmap -sn 192.168.<subnet>.0/24
 ```
 
+## MISC
 ### fix oak-d: no available devices
 ```
 echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="03e7", MODE="0666"' | sudo tee /etc/udev/rules.d/80-movidius.rules
