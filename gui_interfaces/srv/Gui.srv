@@ -1,7 +1,0 @@
-int32 type
-int32 pickupid
-int32 dropoffid
-int32[] machineidarray
----
-int32 deliveryid
-bool isaccepted
