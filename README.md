@@ -1,18 +1,13 @@
 # Turtlebot 4 Resource Collection
 
-## Things to try
-- chrony
-- delay in laserscan transforms
-- delay during laser info processing?
-
 ## TODO
-- reliable and reproducable navigation
-- elevator control node
-- GUI
+- reliable and reproducable navigation &#10004;
+- elevator control node &#10004;
+- GUI &#10004;
 - dropoff/pickup station docking
-- task planner
-- traffic planner(?)
-- QoS level subscriber? (10 = REALIABILITY?)
+- task planner &#10004;
+- traffic planner
+- QoS level subscriber &#10004;
 
 ## SSH
 ```
@@ -32,7 +27,7 @@ pw: wlpassword013
 ```
 ### find PI4 IP on network
 ```
-nmap -sn 192.168.1.0/24
+nmap -sn 192.168.<subnet>.0/24
 ```
 
 ### fix oak-d: no available devices
