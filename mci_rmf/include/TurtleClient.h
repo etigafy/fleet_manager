@@ -14,7 +14,7 @@
 
 #include "sensor_msgs/msg/battery_state.hpp"
 
-#include "irobot_create_msgs/msg/dock_status.hpp"
+#include "irobot_create_msgs/msg/dock_status.hpp"s
 #include "irobot_create_msgs/action/dock.hpp"
 #include "irobot_create_msgs/action/undock.hpp"
 #include "irobot_create_msgs/action/drive_distance.hpp"
