@@ -150,7 +150,7 @@ void TurtleClient::moveToPose(PoseStamped goalPose)
     send_goal_options.result_callback = std::bind(&TurtleClient::callback_navigateToPose_result, this, std::placeholders::_1);
 
     // send goal
-    auto future = action_navigateToPose->async_send_goal(goal_msg, send_goal_options);
+    this->action_navigateToPose->async_send_goal(goal_msg, send_goal_options);
     
     // wait for future to complete
     size_t counter = 0;
@@ -183,7 +183,7 @@ void TurtleClient::cameraDock()
     send_goal_options.result_callback = std::bind(&TurtleClient::callback_cameraDocking_result, this, std::placeholders::_1);
 
     // send goal
-    auto future = action_cameraDocking->async_send_goal(goal_msg, send_goal_options);
+    this->action_cameraDocking->async_send_goal(goal_msg, send_goal_options);
     
     // wait for future to complete
     size_t counter = 0;
@@ -217,7 +217,7 @@ void TurtleClient::dock()
     if( !action_dock->wait_for_action_server() ) rclcpp::shutdown();
 
     auto goal_msg = Dock::Goal();
-    auto future = action_dock->async_send_goal(goal_msg);
+    this->action_dock->async_send_goal(goal_msg);
 
     // wait for undock to complete
     size_t counter = 0;
@@ -240,7 +240,7 @@ void TurtleClient::undock()
     if( !action_undock->wait_for_action_server() ) rclcpp::shutdown();
 
     auto goal_msg = Undock::Goal();
-    auto future = action_undock->async_send_goal(goal_msg);
+    this->action_undock->async_send_goal(goal_msg);
 
     // wait for undock to complete
     size_t counter = 0;
@@ -326,9 +326,8 @@ void TurtleClient::moveLinear(float distance)
 
 // ---------------------------- NavigateToPose action callbacks --------------------------------------------------------------------
 
-void TurtleClient::callback_navigateToPose_goal_response(std::shared_future<rclcpp_action::ClientGoalHandle<NavigateToPose>::SharedPtr> future)
+void TurtleClient::callback_navigateToPose_goal_response(const rclcpp_action::ClientGoalHandle<NavigateToPose>::SharedPtr & goal_handle)
 {
-    auto goal_handle = future.get();
     if(!goal_handle)
     {
         RCLCPP_INFO(get_logger(), "[nav2] NavigateToPose: goal rejected!");
@@ -365,9 +364,8 @@ void TurtleClient::callback_navigateToPose_result(const rclcpp_action::ClientGoa
 
 // ---------------------------- cameraDocking action callbacks --------------------------------------------------------------------
 
-void TurtleClient::callback_cameraDocking_goal_response(std::shared_future<rclcpp_action::ClientGoalHandle<action_interfaces::action::Dock>::SharedPtr> future)
+void TurtleClient::callback_cameraDocking_goal_response(const rclcpp_action::ClientGoalHandle<action_interfaces::action::Dock>::SharedPtr & goal_handle)
 {
-    auto goal_handle = future.get();
     if(!goal_handle)
     {
         RCLCPP_INFO(get_logger(), "[CD] CameraDocking: goal rejected!");
@@ -403,9 +401,8 @@ void TurtleClient::callback_cameraDocking_result(const rclcpp_action::ClientGoal
 }
 
 // ----------------------------------- moveLinear callbacks -------------------------------------------------------------
-void TurtleClient::callback_createMoveLinear_goal_response(std::shared_future<rclcpp_action::ClientGoalHandle<DriveDistance>::SharedPtr> future)
+void TurtleClient::callback_createMoveLinear_goal_response(const rclcpp_action::ClientGoalHandle<DriveDistance>::SharedPtr & goal_handle)
 {
-    auto goal_handle = future.get();
     if(!goal_handle)
     {
         RCLCPP_INFO(get_logger(), "[ML] MoveLinear: goal rejected!");

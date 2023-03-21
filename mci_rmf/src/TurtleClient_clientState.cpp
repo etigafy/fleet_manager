@@ -20,7 +20,7 @@ void TurtleClient::callback_clientState()
     counter++;
 }
 
-void TurtleClient::callback_dock(Dock msg)
+void TurtleClient::callback_dock(DockStatus msg)
 {
     msg.is_docked ? isDocked = 1 : isDocked = 0;
     // printf("dock, %i\n", *isDocked);

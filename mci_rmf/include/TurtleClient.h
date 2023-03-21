@@ -14,7 +14,7 @@
 
 #include "sensor_msgs/msg/battery_state.hpp"
 
-#include "irobot_create_msgs/msg/dock_status.hpp"s
+#include "irobot_create_msgs/msg/dock_status.hpp"
 #include "irobot_create_msgs/action/dock.hpp"
 #include "irobot_create_msgs/action/undock.hpp"
 #include "irobot_create_msgs/action/drive_distance.hpp"
@@ -61,7 +61,7 @@ public:
         auto qos_sensor_data = rclcpp::QoS(rclcpp::KeepLast(1), rmw_qos_profile_sensor_data);
 
         subscription_clientTask = create_subscription<ClientTask>("clientTask", 10, std::bind(&TurtleClient::callback_clientTask, this, std::placeholders::_1), options_clientTask);
-        subscription_dock = create_subscription<Dock>("dock", qos_sensor_data, std::bind(&TurtleClient::callback_dock, this, std::placeholders::_1));
+        subscription_dock = create_subscription<DockStatus>("dock", qos_sensor_data, std::bind(&TurtleClient::callback_dock, this, std::placeholders::_1));
         subscription_batteryState = create_subscription<BatteryState>("battery_state", qos_sensor_data, std::bind(&TurtleClient::callback_batteryState, this, std::placeholders::_1));
         subscription_odom = create_subscription<Odometry>("odom", qos_sensor_data, std::bind(&TurtleClient::callback_odom, this, std::placeholders::_1));
 
@@ -102,7 +102,7 @@ private:
 
     // subscriptions
     rclcpp::Subscription<ClientTask>::SharedPtr subscription_clientTask;
-    rclcpp::Subscription<Dock>::SharedPtr subscription_dock;
+    rclcpp::Subscription<DockStatus>::SharedPtr subscription_dock;
     rclcpp::Subscription<BatteryState>::SharedPtr subscription_batteryState;
     rclcpp::Subscription<Odometry>::SharedPtr subscription_odom;
 
@@ -120,15 +120,15 @@ private:
     rclcpp_action::Client<DriveDistance>::SharedPtr action_createMoveLinear;
     // callbacks
     void callback_clientState();
-    void callback_dock(Dock msg);
+    void callback_dock(DockStatus msg);
     void callback_clientTask(ClientTask msg);
-    void callback_navigateToPose_goal_response(std::shared_future<rclcpp_action::ClientGoalHandle<NavigateToPose>::SharedPtr> future);
+    void callback_navigateToPose_goal_response(const rclcpp_action::ClientGoalHandle<NavigateToPose>::SharedPtr & goal_handle);
     void callback_navigateToPose_result(const rclcpp_action::ClientGoalHandle<NavigateToPose>::WrappedResult &result);
     void callback_batteryState(BatteryState msg);
     void callback_odom(Odometry msg);
-    void callback_cameraDocking_goal_response(std::shared_future<rclcpp_action::ClientGoalHandle<action_interfaces::action::Dock>::SharedPtr> future);
+    void callback_cameraDocking_goal_response(const rclcpp_action::ClientGoalHandle<action_interfaces::action::Dock>::SharedPtr & goal_handle);
     void callback_cameraDocking_result(const rclcpp_action::ClientGoalHandle<action_interfaces::action::Dock>::WrappedResult &result);
-    void callback_createMoveLinear_goal_response(std::shared_future<rclcpp_action::ClientGoalHandle<DriveDistance>::SharedPtr> future);
+    void callback_createMoveLinear_goal_response(const rclcpp_action::ClientGoalHandle<DriveDistance>::SharedPtr & goal_handle);
     void callback_createMoveLinear_result(const rclcpp_action::ClientGoalHandle<DriveDistance>::WrappedResult &result);
 
     void callback_clientTask1(ClientTask msg);
